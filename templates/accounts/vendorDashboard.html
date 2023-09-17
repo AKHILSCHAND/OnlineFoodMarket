@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'includes/alerts.html' %}
+
+
+{{user.username}}
+{{user.get_role}}
+
+
+{% endblock %}

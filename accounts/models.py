@@ -88,6 +88,8 @@ class User(AbstractBaseUser):
     def has_module_perms(self, app_label):
         return True
 
+# redirecting custdashboard or vendordashboard while login
+# get_role is defined as a function but we can use as a field
     def get_role(self):
         if self.role == 1:
             user_role = 'Vendor'
