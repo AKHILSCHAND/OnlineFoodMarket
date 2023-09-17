@@ -1,0 +1,14 @@
+{% if messages %}
+    {% for message in messages %}
+        <div class="show-notification alert alert-{{message.tags}} " role="alert">          
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+           <strong>{{message}}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+
+{% comment %} alert-success replaced with alert-{{message.tags}}  {% endcomment %}
